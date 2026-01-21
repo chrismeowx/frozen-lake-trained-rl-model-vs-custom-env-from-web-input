@@ -8,9 +8,11 @@ import { TILE } from "../lib/tiles"
 import Image from "next/image"
 import human from "../public/boy.png"
 
+type TileType = typeof TILE[keyof typeof TILE]
+
 export default function Page() {
   const [gridSize, setGridSize] = useState(4)
-  const [selectedTile, setSelectedTile] = useState(TILE.GRASS)
+  const [selectedTile, setSelectedTile] = useState<TileType>(TILE.GRASS)
   const [grid, setGrid] = useState<number[]>(Array(16).fill(TILE.GRASS))
 
   const [qFrames, setQFrames] = useState<number[][]>([])
