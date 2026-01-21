@@ -1,7 +1,9 @@
 import { TILE } from "../../lib/tiles"
 
+type TileType = typeof TILE[keyof typeof TILE]
+
 type Props = {
-  setSelectedTile: (tile: TILE) => void
+  setSelectedTile: (tile: TileType) => void
 }
 
 export default function ComponentSelector({ setSelectedTile }: Props) {
