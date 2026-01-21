@@ -1,0 +1,6 @@
+fastapi==0.128.0
+gymnasium==0.29.1
+matplotlib==3.10.8
+numpy==2.4.1
+pydantic==2.12.5
+stable_baselines3==2.3.2
