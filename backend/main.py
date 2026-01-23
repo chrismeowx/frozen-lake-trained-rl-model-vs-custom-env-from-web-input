@@ -5,6 +5,7 @@ import json
 from stable_baselines3 import DQN
 from custom_env import CustomEnv
 import numpy as np
+from huggingface_hub import hf_hub_download
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
@@ -23,7 +24,8 @@ with open("models/q_learning.json", "r") as f:
     data = json.load(f)
 q_table = np.array(data["Q"])
 
-dqn_model = DQN.load("models/dqn.zip")
+zip_path = hf_hub_download(repo_id="tinemeowx/dqn-model", filename="dqn.zip")
+dqn_model = DQN.load(zip_path)
 
 class EnvRequest(BaseModel):
     gridSize: int
