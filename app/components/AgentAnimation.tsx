@@ -57,9 +57,6 @@ export default function AgentAnimation({ qFrames, dqnFrames, gridSize }: Props) 
 
   return (
     <div className="mt-12 px-6">
-      <h2 className="text-4xl font-bold text-center mb-20">
-        Agent Animation
-      </h2>
 
       <div className="flex justify-center gap-12">
 
