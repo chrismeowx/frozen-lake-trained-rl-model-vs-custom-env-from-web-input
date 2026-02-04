@@ -31,7 +31,7 @@ class CustomEnv(gym.Env):
         nr = np.clip(nr, 0, self.size - 1)
         nc = np.clip(nc, 0, self.size - 1)
 
-        reward = -0.01
+        reward = 0
         done = False
 
         if self.grid[nr, nc] != 0:
